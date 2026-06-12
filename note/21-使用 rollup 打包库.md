@@ -91,11 +91,39 @@ export function h(type, props?, children?) {
 }
 ```
 
-main.ts
+main.js
 
 ```
+import App from "./App";
+import { createApp } from '../lib/2026-mini-vue3.esm'
+const rootContainer = document.querySelector('#root')
+createApp(App).mount(rootContainer)
+```
+
+h.ts
 
 ```
+import { } from '../lib/2026-mini-vue3.esm'
+export default {
+  render() {
+    return h('div', `hello ${this.msg}`)
+  },
+  setup(props) {
+    return {
+      msg: 'mini-vue'
+    }
+  }
+}
+```
+
+package.json
+
+```
+"main": "lib/2026-mini-vue3.cjs.js",
+"module": "lib/2026-mini-vue3.esm.js",
+```
+
+
 
 
 

@@ -1,3 +1,4 @@
 import App from "./App";
-
-createApp(App).mount('#root')
+import { createApp } from '../lib/2026-mini-vue3.esm'
+const rootContainer = document.querySelector('#root')
+createApp(App).mount(rootContainer)

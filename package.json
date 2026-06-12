@@ -2,7 +2,8 @@
   "type": "module",
   "name": "2026-mini-vue3",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/2026-mini-vue3.cjs.js",
+  "module": "lib/2026-mini-vue3.esm.js",
   "license": "MIT",
   "scripts": {
     "test": "jest",
