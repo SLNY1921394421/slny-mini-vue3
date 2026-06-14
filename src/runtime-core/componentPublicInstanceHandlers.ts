@@ -1,7 +1,7 @@
 const publicPropsMap = {
-  '$el': (i => i.vnode.el)
+  $el: (i => i.vnode.$el)
 }
-export const PublicInstanceHnadlers = {
+export const publicInstanceHandlers = {
   get({ _: instance }, key) {
     const { setupState } = instance
     if (key in setupState) {
@@ -11,6 +11,5 @@ export const PublicInstanceHnadlers = {
     if (publicGetter) {
       return publicGetter(instance)
     }
-
   }
 }

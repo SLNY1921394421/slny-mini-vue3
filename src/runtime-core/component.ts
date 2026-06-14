@@ -1,4 +1,4 @@
-import { PublicInstanceHnadlers } from "./componentPublicInstanceHandlers";
+import { publicInstanceHandlers } from "./componentPublicInstanceHandlers";
 
 export function createComponentInstance(vnode) {
   const component = {
@@ -18,8 +18,7 @@ export function setupComponent(instance) {
 function setupStatefulComponent(instance: any) {
   const Component = instance.type;
 
-  instance.proxy = new Proxy({ _: instance },
-    PublicInstanceHnadlers)
+  instance.proxy = new Proxy({ _: instance }, publicInstanceHandlers)
   const { setup } = Component
   if (setup) {
     const setupResult = setup()
