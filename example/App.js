@@ -6,7 +6,13 @@ export default {
     return h("div",
       {
         id: "root",
-        class: ["red", "blue"]
+        class: ["red", "blue"],
+        onClick() {
+          console.log('onclick...')
+        },
+        onMousedown() {
+          console.log('onMousedown')
+        }
       },
       // string
       // 'hello, mini-vue'
